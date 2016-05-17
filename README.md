@@ -3,7 +3,7 @@
 A simplistic clean and minimal theme for rEFInd
 
 
-![Screenshot 01](http://i.imgur.com/wQQ5OiQ.png)
+![Screenshot 01](http://i.imgur.com/Ahqwjk0.png)
 **press F10 to take screenshot
 
 
