@@ -71,15 +71,17 @@ NOTE: this is a fork of [munlik's theme](https://github.com/munlik/refind-theme-
 
 1. The icons must be in `svg` format to allow easy generation of icons at any scale. Canvas size must have width and height 128 px for OS icons, or 48 px for tool icons. The actual icon in the svg file should roughly fit in a square with a side of 96 px or 20 px (for OS and tool icons, respectively). Inkscape is a good program to create and work with svg files.
 
-2. Copy the svg file in `/src/svg/big` or `/src/svg/small` (depending on what is more appropriate) and rename them to be consistent with others.
+2. Refind uses the file name to select the right icon, so icons for Linux OS must have the correct OS name from that distro's /etc/os-release file "ID" or ID_LIKE" entries, for example if ID=cachyos the icon name becomes os_cachyos.svg
 
-3. Install inkskape and optipng in your linux system as they will be needed to process the icons by the next step.
+3. Copy the svg file in `/src/svg/big` or `/src/svg/small` (depending on what is more appropriate) and rename them to be consistent with others.
 
-4. `cd` in the `./src` directory and run the script `./render_bitmap.sh`, which will process the svg files and generate the png files at various sizes.
+4. Install inkskape and optipng in your linux system as they will be needed to process the icons by the next step.
 
-5. Copy the `png` icons you generated from their `/src/bitmap` subfolder into the appropriate `/icons` subfolders for their size by running `./copy-bitmap.sh`.
+5. `cd` in the `./src` directory and run the script `./render_bitmap.sh`, which will process the svg files and generate the png files at various sizes.
 
-6. Commit your changes, upload to your fork and then open a PR.
+6. Copy the `png` icons you generated from their `/src/bitmap` subfolder into the appropriate `/icons` subfolders for their size by running `./copy-bitmap.sh`.
+
+7. Commit your changes, upload to your fork and then open a PR.
 
 **More information**
 
