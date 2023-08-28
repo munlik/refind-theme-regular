@@ -16,9 +16,9 @@ SRC_DIR=""
 OUT_DIR=""
 REG=''
 
-function render_bitmap(){
-    for svgfile in $(ls $SRC_DIR | grep .svg)
-        do
+OPTION="$1"
+
+function do_the_actual_render(){
             filename=$(echo $svgfile | sed $REG)
             if [ -f "$OUT_DIR/$filename.png" ]
                 then
@@ -34,28 +34,36 @@ function render_bitmap(){
                         then
                             $OPTIPNG -o7 --quiet "$OUT_DIR/$filename.png"
                     fi
-
             fi
-        done
-
-        if [ -f $OUT_DIR/os_unknown.png ]
-            then
-                for f in os_clover os_gummiboot os_hwtest os_refit os_network os_systemd-boot
-                    do
+        if [ "$filename" = "os_unknown" ]; then
+            for f in os_clover os_gummiboot os_hwtest os_refit os_network os_systemd-boot
+                do
                         echo "Copying... $OUT_DIR/$f.png"
                         cp -f "$OUT_DIR/os_unknown.png" "$OUT_DIR/$f.png"
                 done
-     	fi
-
-        if [ -f $OUT_DIR/tool_rescue.png ]
-            then
-                for f in tool_apple_rescue tool_windows_rescue
-                    do
+        fi
+        if [ "$filename" = "tool_rescue" ]; then
+            for f in tool_apple_rescue tool_windows_rescue
+                do
                         echo "Copying... $OUT_DIR/$f.png"
                         cp -f "$OUT_DIR/tool_rescue.png" "$OUT_DIR/$f.png"
                 done
-
         fi
+}
+
+function render_bitmap(){
+    for svgfile in $(ls $SRC_DIR | grep .svg)
+        do
+        if [ "$OPTION" = 'renderall' ] ; then
+            #performance-related configuration, so this script does not overload the CPU
+            #commands to give least possible priority as this should NOT lag the PC
+            /usr/bin/renice -n 20 $$
+            /usr/bin/ionice -c2 -n7 -p$$
+            do_the_actual_render &
+        else
+            do_the_actual_render
+        fi
+        done
 }
 function render_big_icon(){
     SCALE=$i
@@ -74,9 +82,12 @@ function render_small_icon(){
     render_bitmap
 }
 
-for i in ${SCALE_PRESET[@]}
-   do
-        render_big_icon
-   	    render_small_icon
-done
+rm -R $OUT
+
+    for i in ${SCALE_PRESET[@]}
+    do
+            render_big_icon
+            render_small_icon
+    done
+
 exit 0

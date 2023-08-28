@@ -4,6 +4,8 @@ icons_folders="128-48 256-96 384-144 512-192"
 
 cd ..
 
+    rm -R "./icons"
+
 for i in $icons_folders ; do
 
     mkdir -p "icons/$i"
