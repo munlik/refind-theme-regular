@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="os_ubuntubudgie.svg"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="44.625582"
+     inkscape:cy="68.633554"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1134"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:publisher>
+        <cc:license
+           rdf:resource="" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36216)">
+    <g
+       id="g3345"
+       transform="matrix(0.359375,0,0,0.359375,18,942.36216)">
+      <circle
+         id="circle8"
+         r="128"
+         cx="128"
+         cy="128"
+         style="fill:#404552" />
+      <path
+         d="m 172,150 c -17.556,0 -32.315,12.472 -37,29 -0.98896,3.4889 -1.6694,4.6841 -3,7 -1.7157,2.9862 -5.1986,7.2988 -10,10 -3.9063,2.1976 -7.2726,4.0674 -12.303,3.3096 -1.3094,-0.19726 -3.6295,-0.56196 -5.951,-1.8976 -3.7,-2.13 -4.92,-4 -7.75,-9.41 0.40401,5.7738 -0.34048,7.8803 2.5,18 5.6541,20.144 27.381,36 53,36 18.991,0 36.592,-7.9151 46.496,-19.998 3.6222,-4.4191 6.3498,-7.9058 9,-14 2.4112,-5.5448 3.0022,-12.653 3.004,-19.002 0.006,-21.556 -17.013,-39 -38,-39 z"
+         id="budgie"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <use
+         id="use11"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="matrix(-0.5,0.86603,-0.86603,-0.5,302.85,81.149)"
+         xlink:href="#budgie" />
+      <use
+         id="use13"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="matrix(-0.5,-0.86603,0.86603,-0.5,81.149,302.85)"
+         xlink:href="#budgie" />
+    </g>
+  </g>
+</svg>
